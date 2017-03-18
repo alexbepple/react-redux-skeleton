@@ -1,8 +1,19 @@
 import React from 'react'
 import {render} from 'react-dom'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
+
+import App from './components/App'
+
+const rootReducer = (state, action) => ({
+  message: 'Hello, world!'
+})
+const store = createStore(rootReducer)
 
 render(
-  <h1>Hello, world!</h1>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 )
 
