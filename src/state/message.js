@@ -1,5 +1,8 @@
+import {createReducer, createAction} from 'redux-act'
 
-const reducer = (state, action) => 'Hello, world!'
+const initialMessage = 'Hello, world!'
+const noInitialHandlers = {}
+const reducer = createReducer(noInitialHandlers, initialMessage)
 
 export default reducer
 
