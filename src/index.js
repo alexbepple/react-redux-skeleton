@@ -3,11 +3,9 @@ import {render} from 'react-dom'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 
+import rootReducer from './state'
 import App from './components/App'
 
-const rootReducer = (state, action) => ({
-  message: 'Hello, world!'
-})
 const store = createStore(rootReducer)
 
 render(
