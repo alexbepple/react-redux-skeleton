@@ -1,4 +1,4 @@
 {
-  "complete": "cd {{ name }} && git init . && git add . && git commit -m 'initial commit'"
+  "complete": "cd {{ name }} && rm template.json && git init . && git add . && git commit -m 'initial commit'"
 }
 
